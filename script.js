@@ -43,8 +43,6 @@ let startGame =()=>{
 	restart.style.display="block"
   form.style.display="none";
 	mainBox.style.display = "flex"
-  // startGame(player1, player2);
-  console.log("**************************************")
   twoPlayers = [player1, player2];
   const endMessage = document.getElementById("message");
   endMessage.textContent=`${twoPlayers[0]}, you're up`;
@@ -59,13 +57,13 @@ let startGame =()=>{
       
       if(checkWinner(currentPlayer)){
         
-        let winner = "";
+        let username = "";
         if(currentPlayer == "X"){
-          winner = twoPlayers[0]
+          username = twoPlayers[0]
         }else{
-          winner = twoPlayers[1]
+          username = twoPlayers[1]
         }
-        endMessage.textContent=`${winner}, congratulations you won!`;
+        endMessage.textContent=`${username}, congratulations you won!`;
         return
       }
       
