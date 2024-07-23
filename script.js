@@ -38,8 +38,8 @@ function enterGame(event){
 
 let startGame =()=>{
 	  let form = document.getElementById("forms"); 
-	  let player1 = document.getElementById("player-1").value;
-  let player2 = document.getElementById("player-2").value;
+	  let player1 = document.getElementById("player1").value;
+  let player2 = document.getElementById("player2").value;
 	restart.style.display="block"
   form.style.display="none";
 	mainBox.style.display = "flex"

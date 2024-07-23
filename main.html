@@ -6,42 +6,36 @@
   </head>
   <body>
 	  <div class="container">
-    <!-- <div class="forms" id="forms"> -->
-		<form id="players" onsubmit="enterGame(event)">
-      <label for="player-1">Player 1</label>
-      <input type="text" id="player-1" placeholder="enter name">
-      <br><br>
-      <label for="player-2">Player 2</label>
-      <input type="text" id="player-2" placeholder="enter name">
-      <br><br>
-			<div class="start-btn">
-				<button type="submit" id="submit">start game</button>
-			</div>
-      
-    </form>
-	<!-- </div> -->
-    
-    <div class="main-box" >
-		<h1 style="text-align:center">Tic Tac Toe</h1>
-		<h2 class ="message" id="message"></h2>
-      <div class="boxes" id="boxes">
-        <div class="box" id="box-0"></div>
-        <div class="box" id="box-1"></div>
-        <div class="box" id="box-2"></div> 
-      
-        <div class="box" id="box-3"></div>
-        <div class="box" id="box-4"></div>
-        <div class="box" id="box-5"></div>
-        
-        <div class="box" id="box-6"></div>
-        <div class="box" id="box-7"></div>
-        <div class="box" id="box-8"></div>
-      </div>
-	</div>
-
-		  <button id="restart">Restart</button>
+		  <div class="forms" id="forms">
+			  <form id="players" onsubmit="enterGame(event)">
+				<label for="player1">Player 1</label>
+				<input type="text" id="player1" placeholder="enter name" required>
+				  <br><br>
+				  <label for="player2">Player 2</label>
+				  <input type="text" id="player2" placeholder="enter name" required>
+				  <br><br>
+				  <div class="start-btn">
+					  <button type="submit" id="submit">start game</button>
+				  </div>
+			  </form>
 		  </div>
-      
+		  <div class="main-box" >
+			  <h1 style="text-align:center">Tic Tac Toe</h1>
+			  <h2 class ="message" id="message"></h2>
+			  <div class="boxes" id="boxes">
+				  <div class="box" id="box-0"></div>
+				  <div class="box" id="box-1"></div>
+				  <div class="box" id="box-2"></div> 
+				  <div class="box" id="box-3"></div>
+				  <div class="box" id="box-4"></div>
+				  <div class="box" id="box-5"></div>
+				  <div class="box" id="box-6"></div>
+				  <div class="box" id="box-7"></div>
+				  <div class="box" id="box-8"></div>
+			  </div>
+		  </div>
+		  <button id="restart">Restart</button>
+	  </div> 
       <script src="script.js"></script>
   </body>
 </html>
