@@ -1,8 +1,4 @@
 //your JS code here. If required.
-// board = boxes
-// square = box
-
-
 const winning_combinations = [
     [0, 1, 2],
     [3, 4, 5],
@@ -16,6 +12,7 @@ const winning_combinations = [
 
 const boxes = document.getElementById("boxes");
 const box = document.getElementsByClassName("box");
+console.log("asasasasasasasaassasasasasas",box)
 const mainBox = document.querySelector(".main-box")
 const players = ['x','o'];
 let twoPlayers = []
@@ -55,19 +52,19 @@ let startGame =()=>{
       box[i].textContent = currentPlayer;
       
       console.log("checkWinner:", checkWinner(currentPlayer))
-      
+    
       if(checkWinner(currentPlayer)){
                 // let username = currentPlayer == "X" ? twoPlayers[0]:twoPlayers[1];
-
+console.log("YASSSSSSS")
         let username = currentPlayer == "x" ? "Player1":"Player2";
         endMessage.textContent=`${username}, congratulations you won!`;
-    
+    return
       }
       
       console.log("checkTie",checkTie())
       if(checkTie()){
         endMessage.textContent="Game is tied!"
-        
+        return
       }
       
       currentPlayer = (currentPlayer ===  players[0]) ? players[1]:players[0];
@@ -118,9 +115,8 @@ restart.addEventListener('click',()=>{
 		box[i].style.backgroundColor = "#ffc0cb";
 		box[i].style.color = ""; 
 	} 
-	box[0].textContent="x";
-	box[3].textContent="o";
 	
+	currentPlayer = players[0]
 	startGame()
 })
 
