@@ -57,7 +57,7 @@ let startGame =()=>{
                 // let username = currentPlayer == "X" ? twoPlayers[0]:twoPlayers[1];
 console.log("YASSSSSSS")
         let username = currentPlayer == "x" ? "Player1":"Player2";
-        endMessage.textContent=`${username}, congratulations you won!`;
+        endMessage.textContent=username+" congratulations you won!";
     return
       }
       
