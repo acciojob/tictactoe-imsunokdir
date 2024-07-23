@@ -17,7 +17,7 @@ const winning_combinations = [
 const boxes = document.getElementById("boxes");
 const box = document.getElementsByClassName("box");
 const mainBox = document.querySelector(".main-box")
-const players = ['X','O'];
+const players = ['x','o'];
 let twoPlayers = []
 let currentPlayer = players[0];
 let restart = document.getElementById("restart");
@@ -59,7 +59,7 @@ let startGame =()=>{
       if(checkWinner(currentPlayer)){
                 // let username = currentPlayer == "X" ? twoPlayers[0]:twoPlayers[1];
 
-        let username = currentPlayer == "X" ? "Player1":"Player2";
+        let username = currentPlayer == "x" ? "Player1":"Player2";
         endMessage.textContent=`${username}, congratulations you won!`;
     
       }
