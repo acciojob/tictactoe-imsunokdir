@@ -61,13 +61,13 @@ let startGame =()=>{
 
         let username = currentPlayer == "X" ? "Player1":"Player2";
         endMessage.textContent=`${username}, congratulations you won!`;
-        return
+    
       }
       
       console.log("checkTie",checkTie())
       if(checkTie()){
         endMessage.textContent="Game is tied!"
-        return
+        
       }
       
       currentPlayer = (currentPlayer ===  players[0]) ? players[1]:players[0];
@@ -75,7 +75,7 @@ let startGame =()=>{
       if(currentPlayer == players[0]){
         endMessage.textContent="Player1, you're up"
       }else{ 
-        endMessage.textContent = "Player2, you're up"
+        endMessage.textContent = "Player2, you\'re up"
       }
     })
   }
