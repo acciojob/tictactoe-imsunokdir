@@ -46,7 +46,7 @@ let startGame =()=>{
   twoPlayers = [player1, player2];
   const endMessage = document.getElementById("message");
   // endMessage.textContent=`${twoPlayers[0]}, you're up`;
-	endMessage.textContent=`Player1, you're up`;
+	endMessage.textContent=`Player1, you\'re up`;
   for(let i=0;i<box.length;i++){
     box[i].addEventListener('click',()=>{
       if(box[i].textContent !== ""){
@@ -73,9 +73,9 @@ let startGame =()=>{
       currentPlayer = (currentPlayer ===  players[0]) ? players[1]:players[0];
       console.log("curr:", currentPlayer)
       if(currentPlayer == players[0]){
-        endMessage.textContent=`Player1, you're up`
+        endMessage.textContent=`Player1, you\'re up`
       }else{ 
-        endMessage.textContent = `Player2, you're up`
+        endMessage.textContent = `Player2, you\'re up`
       }
     })
   }
