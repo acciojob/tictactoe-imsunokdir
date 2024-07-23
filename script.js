@@ -114,10 +114,12 @@ let checkTie=()=>{
 
 restart.addEventListener('click',()=>{
 	for(let i=0;i<box.length;i++){
-		box[i].textContent = "";
+		box[i].textContent = ""; 
 		box[i].style.backgroundColor = "#ffc0cb";
-		box[i].style.color = "";
-	}
+		box[i].style.color = ""; 
+	} 
+	box[0].textContent="x";
+	box[3].textContent="o";
 	
 	startGame()
 })
