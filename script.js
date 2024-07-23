@@ -45,7 +45,7 @@ let startGame =()=>{
 	mainBox.style.display = "flex"
   twoPlayers = [player1, player2];
   const endMessage = document.getElementById("message");
-  endMessage.textContent=`Player1, you're up`;
+  endMessage.textContent=`${twoPlayers[0]}, you're up`;
   for(let i=0;i<box.length;i++){
     box[i].addEventListener('click',()=>{
       if(box[i].textContent !== ""){
@@ -58,7 +58,7 @@ let startGame =()=>{
       if(checkWinner(currentPlayer)){
                 // let username = currentPlayer == "X" ? twoPlayers[0]:twoPlayers[1];
 
-        let username = currentPlayer == "X" ? "Player1":"Player2";
+        let username = currentPlayer == "X" ? twoPlayers[0]:twoPlayers[1];
         endMessage.textContent=`${username}, congratulations you won!`;
         return
       }
@@ -71,15 +71,10 @@ let startGame =()=>{
       
       currentPlayer = (currentPlayer ===  players[0]) ? players[1]:players[0];
       console.log("curr:", currentPlayer)
-      // if(currentPlayer == players[0]){
-      //   endMessage.textContent=`${twoPlayers[0]}, you're up`
-      // }else{ 
-      //   endMessage.textContent = `${twoPlayers[1]}, you're up`
-      // }
-		      if(currentPlayer == players[0]){
-        endMessage.textContent=`Player1, you're up`
+      if(currentPlayer == players[0]){
+        endMessage.textContent=`${twoPlayers[0]}, you're up`
       }else{ 
-        endMessage.textContent = `Player2, you're up`
+        endMessage.textContent = `${twoPlayers[1]}, you're up`
       }
     })
   }
