@@ -38,6 +38,8 @@ input{
 }
 .main-box{
 	display:none;
+	flex-direction:column;
+	flex-wrap:wrap;
 }
 .boxes{
 	display:grid;
